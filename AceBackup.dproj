@@ -1,0 +1,300 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{69085209-f7b6-4707-8a31-014defd8af9e}</ProjectGuid>
+        <MainSource>AceBackup.dpr</MainSource>
+        <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+        <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+        <DCC_DependencyCheckOutputName>Bin\AceBackup.exe</DCC_DependencyCheckOutputName>
+        <FrameworkType>VCL</FrameworkType>
+        <ProjectVersion>18.8</ProjectVersion>
+        <Base>True</Base>
+        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <TargetedPlatforms>1</TargetedPlatforms>
+        <AppType>Application</AppType>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_MajorVer>3</VerInfo_MajorVer>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Release>3</VerInfo_Release>
+        <VerInfo_Keys>CompanyName=AceBIT;FileDescription=AceBackup;FileVersion=3.0.3.0;InternalName=;LegalCopyright=© 1998 - 2018 by AceBIT GmbH;LegalTrademarks=;OriginalFilename=AceBackup;ProductName=AceBackup 3;ProductVersion=3.0.3;Comments=</VerInfo_Keys>
+        <DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;Winapi;System.Win;$(DCC_Namespace)</DCC_Namespace>
+        <SanitizedProjectName>AceBackup</SanitizedProjectName>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <Icon_MainIcon>AceBackup_Icon.ico</Icon_MainIcon>
+        <VerInfo_Keys>CompanyName=;FileVersion=3.2.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName);FileDescription=$(MSBuildProjectName);ProductName=$(MSBuildProjectName)</VerInfo_Keys>
+        <DCC_Namespace>Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
+        <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
+        <VerInfo_MinorVer>2</VerInfo_MinorVer>
+        <VerInfo_Release>0</VerInfo_Release>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <Icon_MainIcon>AceBackup_Icon8.ico</Icon_MainIcon>
+        <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
+        <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <Version>7.0</Version>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+        <DCC_WriteableConstants>True</DCC_WriteableConstants>
+        <DCC_LocalDebugSymbols>False</DCC_LocalDebugSymbols>
+        <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+        <DCC_ExeOutput>.\Bin</DCC_ExeOutput>
+        <DCC_DcuOutput>.\Dcu</DCC_DcuOutput>
+        <DCC_ObjOutput>.\Dcu</DCC_ObjOutput>
+        <DCC_HppOutput>.\Dcu</DCC_HppOutput>
+        <DCC_UnitSearchPath>$(DELPHI)\Lib\Debug;E:\ACEBIT\COMPONENTS\MCDB;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_ResourcePath>$(DELPHI)\Lib\Debug;E:\ACEBIT\COMPONENTS\MCDB;$(DCC_ResourcePath)</DCC_ResourcePath>
+        <DCC_ObjPath>$(DELPHI)\Lib\Debug;E:\ACEBIT\COMPONENTS\MCDB;$(DCC_ObjPath)</DCC_ObjPath>
+        <DCC_IncludePath>$(DELPHI)\Lib\Debug;E:\ACEBIT\COMPONENTS\MCDB;$(DCC_IncludePath)</DCC_IncludePath>
+        <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <VerInfo_Release>0</VerInfo_Release>
+        <VerInfo_Keys>CompanyName=AceBIT;FileVersion=3.2.0.0;InternalName=AceBackup;LegalCopyright=© 1998 - 2018 by AceBIT GmbH;LegalTrademarks=;OriginalFilename=AceBackup.exe;ProductVersion=3.2.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName);FileDescription=$(MSBuildProjectName);ProductName=$(MSBuildProjectName)</VerInfo_Keys>
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <VerInfo_MinorVer>2</VerInfo_MinorVer>
+        <BT_BuildType>Debug</BT_BuildType>
+        <Icon_MainIcon>AceBackup_Icon.ico</Icon_MainIcon>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <Version>7.0</Version>
+        <DCC_WriteableConstants>True</DCC_WriteableConstants>
+        <DCC_ExeOutput>.\Bin</DCC_ExeOutput>
+        <DCC_DcuOutput>.\Dcu</DCC_DcuOutput>
+        <DCC_ObjOutput>.\Dcu</DCC_ObjOutput>
+        <DCC_HppOutput>.\Dcu</DCC_HppOutput>
+        <DCC_UnitSearchPath>$(BDS)\RaveReports\Lib;$(BDS)\lib\Debug;$(BDS)\Lib\Debug\Indy10;$(DELPHI)\Lib\Debug;E:\ACEBIT\COMPONENTS\MCDB;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_ResourcePath>$(BDS)\RaveReports\Lib;$(BDS)\lib\Debug;$(BDS)\Lib\Debug\Indy10;$(DELPHI)\Lib\Debug;E:\ACEBIT\COMPONENTS\MCDB;$(DCC_ResourcePath)</DCC_ResourcePath>
+        <DCC_ObjPath>$(BDS)\RaveReports\Lib;$(BDS)\lib\Debug;$(BDS)\Lib\Debug\Indy10;$(DELPHI)\Lib\Debug;E:\ACEBIT\COMPONENTS\MCDB;$(DCC_ObjPath)</DCC_ObjPath>
+        <DCC_IncludePath>$(BDS)\RaveReports\Lib;$(BDS)\lib\Debug;$(BDS)\Lib\Debug\Indy10;$(DELPHI)\Lib\Debug;E:\ACEBIT\COMPONENTS\MCDB;$(DCC_IncludePath)</DCC_IncludePath>
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+        <DCC_Optimize>False</DCC_Optimize>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <DCC_DebugDCUs>true</DCC_DebugDCUs>
+        <VerInfo_Keys>CompanyName=;FileVersion=3.2.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductVersion=3.2.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName);FileDescription=$(MSBuildProjectName);ProductName=$(MSBuildProjectName)</VerInfo_Keys>
+        <BT_BuildType>Debug</BT_BuildType>
+        <VerInfo_Release>0</VerInfo_Release>
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <VerInfo_MinorVer>2</VerInfo_MinorVer>
+    </PropertyGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType>VCLApplication</Borland.ProjectType>
+        <BorlandProject>
+            <Delphi.Personality>
+                <Parameters>
+                    <Parameters Name="UseLauncher">False</Parameters>
+                    <Parameters Name="LoadAllSymbols">True</Parameters>
+                    <Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+                </Parameters>
+                <VersionInfo>
+                    <VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+                    <VersionInfo Name="AutoIncBuild">False</VersionInfo>
+                    <VersionInfo Name="MajorVer">3</VersionInfo>
+                    <VersionInfo Name="MinorVer">0</VersionInfo>
+                    <VersionInfo Name="Release">2</VersionInfo>
+                    <VersionInfo Name="Build">0</VersionInfo>
+                    <VersionInfo Name="Debug">False</VersionInfo>
+                    <VersionInfo Name="PreRelease">False</VersionInfo>
+                    <VersionInfo Name="Special">False</VersionInfo>
+                    <VersionInfo Name="Private">False</VersionInfo>
+                    <VersionInfo Name="DLL">False</VersionInfo>
+                    <VersionInfo Name="Locale">1033</VersionInfo>
+                    <VersionInfo Name="CodePage">1252</VersionInfo>
+                </VersionInfo>
+                <VersionInfoKeys>
+                    <VersionInfoKeys Name="CompanyName">AceBIT</VersionInfoKeys>
+                    <VersionInfoKeys Name="FileDescription">AceBackup</VersionInfoKeys>
+                    <VersionInfoKeys Name="FileVersion">3.0.2.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="InternalName"/>
+                    <VersionInfoKeys Name="LegalCopyright">© 1998 - 2012 by AceBIT GmbH</VersionInfoKeys>
+                    <VersionInfoKeys Name="LegalTrademarks"/>
+                    <VersionInfoKeys Name="OriginalFilename">AceBackup</VersionInfoKeys>
+                    <VersionInfoKeys Name="ProductName">AceBackup 3</VersionInfoKeys>
+                    <VersionInfoKeys Name="ProductVersion">3.0.2</VersionInfoKeys>
+                    <VersionInfoKeys Name="Comments"/>
+                </VersionInfoKeys>
+                <Source>
+                    <Source Name="MainSource">AceBackup.dpr</Source>
+                </Source>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k260.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp260.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                </Excluded_Packages>
+            </Delphi.Personality>
+            <Platforms>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">False</Platform>
+            </Platforms>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets"/>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <DCCReference Include="nsTypes.pas"/>
+        <DCCReference Include="nsMainFrm.pas">
+            <Form>frmMain</Form>
+        </DCCReference>
+        <DCCReference Include="nsUtils.pas"/>
+        <DCCReference Include="nsProjectFrm.pas">
+            <Form>frmProjectProperties</Form>
+        </DCCReference>
+        <DCCReference Include="nsSecSettingsFrm.pas">
+            <Form>frmSecSettings</Form>
+        </DCCReference>
+        <DCCReference Include="nsDataObjects.pas"/>
+        <DCCReference Include="nsProcessFrm.pas">
+            <Form>frmProcess</Form>
+        </DCCReference>
+        <DCCReference Include="nsItemFrm.pas">
+            <Form>frmItemProperties</Form>
+        </DCCReference>
+        <DCCReference Include="nsErrRestoreFrm.pas">
+            <Form>frmErrorRestore</Form>
+        </DCCReference>
+        <DCCReference Include="nsActions.pas"/>
+        <DCCReference Include="nsProjPwdFrm.pas">
+            <Form>frmProjectPwd</Form>
+        </DCCReference>
+        <DCCReference Include="nsOptionsFrm.pas">
+            <Form>frmOptions</Form>
+        </DCCReference>
+        <DCCReference Include="nsScheduledThread.pas"/>
+        <DCCReference Include="nsAboutFrm.pas">
+            <Form>frmAbout</Form>
+        </DCCReference>
+        <DCCReference Include="nsImportFrm.pas">
+            <Form>frmImportWizard</Form>
+        </DCCReference>
+        <DCCReference Include="nsMultiFrm.pas">
+            <Form>frmMultiItems</Form>
+        </DCCReference>
+        <DCCReference Include="nsFolderFrm.pas">
+            <Form>frmFolderProperties</Form>
+        </DCCReference>
+        <DCCReference Include="nsConfirmReplaceFrm.pas">
+            <Form>frmConfirmReplaceDlg</Form>
+        </DCCReference>
+        <DCCReference Include="nsConfirmUpdateFrm.pas">
+            <Form>frmConfirmUpdateDlg</Form>
+        </DCCReference>
+        <DCCReference Include="nsLogFrm.pas">
+            <Form>frmLogView</Form>
+        </DCCReference>
+        <DCCReference Include="nsSplashScan.pas">
+            <Form>frmScanner</Form>
+        </DCCReference>
+        <DCCReference Include="nsReplaceForm.pas">
+            <Form>frmReplaceDlg</Form>
+        </DCCReference>
+        <DCCReference Include="nsMasks.pas"/>
+        <DCCReference Include="abSplash.pas">
+            <Form>frmSplashMain</Form>
+        </DCCReference>
+        <DCCReference Include="nsTaskPassword.pas">
+            <Form>frmTaskPassword</Form>
+        </DCCReference>
+        <DCCReference Include="nsAddToFrm.pas">
+            <Form>frmAddToForm</Form>
+        </DCCReference>
+        <DCCReference Include="nsMediaSettings.pas">
+            <Form>frmMediaSettings</Form>
+        </DCCReference>
+        <DCCReference Include="abWizardTemplate.pas">
+            <Form>frmWizardTemplate</Form>
+        </DCCReference>
+        <DCCReference Include="abWizardFrm.pas">
+            <Form>frmNewProjectWizard</Form>
+        </DCCReference>
+        <DCCReference Include="abMasksDlg.pas">
+            <Form>frmMasks</Form>
+        </DCCReference>
+        <DCCReference Include="_balloonform.pas">
+            <Form>BalloonForm</Form>
+        </DCCReference>
+        <DCCReference Include="nsCrypt.pas"/>
+        <DCCReference Include="ziptools.pas"/>
+        <DCCReference Include="nsVerifyFrm.pas">
+            <Form>frmVerifyWizard</Form>
+        </DCCReference>
+        <DCCReference Include="abWaitDlg.pas">
+            <Form>frmWaitDlg</Form>
+        </DCCReference>
+        <DCCReference Include="nsGlobals.pas"/>
+        <DCCReference Include="abBackupWizard.pas">
+            <Form>frmBackupWizard</Form>
+        </DCCReference>
+        <DCCReference Include="abRestoreWizard.pas">
+            <Form>frmRestoreWizard</Form>
+        </DCCReference>
+        <DCCReference Include="abDeleteWizard.pas">
+            <Form>frmDeleteWizard</Form>
+        </DCCReference>
+        <DCCReference Include="winftp.pas"/>
+        <DCCReference Include="cdWriter.pas"/>
+        <DCCReference Include="cdWrapper.pas"/>
+        <DCCReference Include="tsTaskman.pas"/>
+        <DCCReference Include="tsSettings.pas">
+            <Form>frmTaskSettings</Form>
+        </DCCReference>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+    <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+</Project>

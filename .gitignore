@@ -65,5 +65,18 @@ __recovery/
 # Castalia statistics file (since XE7 Castalia is distributed with Delphi)
 *.stat
 
+# my files and dirs
+bin/
+dcu/
+release/
+debug/
+*.zip
+*.dSYM
+*.skincfg
+*.txt
+*.db
+*.DS_Store
+*.msi
+
 # Boss dependency manager vendor folder https://github.com/HashLoad/boss
 modules/
